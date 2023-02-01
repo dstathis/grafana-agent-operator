@@ -20,7 +20,7 @@ jobs:
       - name: Install dependencies
         run: python3 -m pip install tox
       - name: Render k8s Charm
-        run: tox -e --workdir $GITHUB_WORKSPACE/main render-k8s
+        run: tox --workdir $GITHUB_WORKSPACE/main -e render-k8s
   release:
     uses: canonical/observability/.github/workflows/release-charm.yaml@main
     need: render

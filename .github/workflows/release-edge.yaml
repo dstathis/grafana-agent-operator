@@ -22,7 +22,7 @@ jobs:
       - name: Render k8s Charm
         run: tox --workdir $GITHUB_WORKSPACE/main -e render-k8s
   release:
-    uses: canonical/observability/.github/workflows/release-charm.yaml@main
+    uses: dstathis/observability/.github/workflows/release-charm.yaml@artifacts
     needs: render
     secrets: inherit
     with:

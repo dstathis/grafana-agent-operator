@@ -36,7 +36,7 @@ juju add-model cos
 The Grafana agent may be deployed using the juju command line:
 
 ```bash
-juju deploy grafana-agent-k8s
+juju deploy grafana-agent-k8s --trust
 ```
 
 If required, you can remove the deployment completely:
@@ -72,4 +72,4 @@ More detailed information about these relations can be found in [Charmhub docs p
 
 ## OCI Images
 
-This charm by default uses the `v0.26.1` release of the [grafana/agent](https://hub.docker.com/r/grafana/agent)
+This charm by default uses the `latest` release of the [grafana-agent](http://ghcr.io/canonical/grafana-agent)
